@@ -1,9 +1,16 @@
-﻿namespace SistemaCadastroLivrosPOO;
+﻿using SistemaCadastroLivrosPOO.Entities;
 
-class Program
+namespace SistemaCadastroLivrosPOO
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            Funcionario funcionario = new Funcionario("João Silva", "123456789", "Bibliotecário");
+            Cliente cliente = new Cliente("Maria Oliveira", "987654321", "Rua das Flores, 123");
+
+            funcionario.ObterIdentificacao();
+            cliente.ObterIdentificacao();
+        }
     }
 }

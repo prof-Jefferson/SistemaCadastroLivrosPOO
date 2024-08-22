@@ -6,13 +6,25 @@ namespace SistemaCadastroLivrosPOO
     {
         static void Main(string[] args)
         {
-            Livro livro = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", "978-8578270332");
+            Biblioteca biblioteca = new Biblioteca();
+
+            Funcionario funcionario = new Funcionario("João Silva", "123456789", "Bibliotecário");
             Cliente cliente = new Cliente("Maria Oliveira", "987654321", "Rua das Flores, 123");
+            Livro livro = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", "978-8578270332");
 
-            Emprestimo emprestimo = new Emprestimo(livro, cliente);
-            emprestimo.ConcluirEmprestimo();
+            biblioteca.RegistrarFuncionario(funcionario);
+            biblioteca.RegistrarCliente(cliente);
+            biblioteca.AdicionarLivro(livro);
 
-            emprestimo.DevolverLivro();
+            biblioteca.ListarFuncionarios();
+            biblioteca.ListarClientes();
+            biblioteca.ListarLivros();
+
+            biblioteca.RealizarEmprestimo(livro, cliente);
+            biblioteca.ListarLivros();
+
+            biblioteca.ReceberDevolucao(livro, cliente);
+            biblioteca.ListarLivros();
         }
     }
 }

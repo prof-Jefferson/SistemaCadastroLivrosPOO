@@ -1,24 +1,43 @@
-# Compiled class file
-*.class
+# Build Folders (Bin, Obj, etc)
+bin/
+obj/
+out/
 
-# Log file
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
 *.log
+*.tlog
+*.vspscc
+*.vssscc
 
-# BlueJ files
-*.ctxt
+# Visual Studio Code
+.vscode/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# NuGet Packages
+*.nupkg
+*.snupkg
+.nuget/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# Entity Framework
+Migrations/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Others
+*.tmp
+*.bak
+*.swp

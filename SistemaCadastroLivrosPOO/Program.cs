@@ -6,11 +6,13 @@ namespace SistemaCadastroLivrosPOO
     {
         static void Main(string[] args)
         {
-            Funcionario funcionario = new Funcionario("João Silva", "123456789", "Bibliotecário");
+            Livro livro = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", "978-8578270332");
             Cliente cliente = new Cliente("Maria Oliveira", "987654321", "Rua das Flores, 123");
 
-            funcionario.ObterIdentificacao();
-            cliente.ObterIdentificacao();
+            Emprestimo emprestimo = new Emprestimo(livro, cliente);
+            emprestimo.ConcluirEmprestimo();
+
+            emprestimo.DevolverLivro();
         }
     }
 }
